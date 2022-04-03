@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #site{
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        grid-template-areas:
+            'header header header'
+            'main main sidebar'
+            'remark remark remark'
+            'footer footer footer';
+    }
+
+    #header, #main, #sidebar, #remark, #footer {
+        border: 1px solid;
+        border-radius: 5px;
+    }
+
+    #header {
+        grid-area: header;
+    }
+
+    #main {
+        grid-area: main;
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+    }
+
+    #remark {
+        grid-area: remark;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+
+    @media screen and (max-width: 728px) {
+        #site {
+            grid-template-areas: 
+                'header'
+                'main'
+                'remark'
+                'footer';
+        }
+
+        #sidebar {
+            display: none;
+        }
+    }
+
+</style>
+<body>
+    <div id="site">
+
+        <div id="header">
+            <h1>Header of the site</h1>
+        </div>
+
+        <div id="main">
+            <h2>main content</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Maxime adipisci odit ipsam maiores sed dolorum, soluta optio voluptate cum debitis repellendus rem excepturi. 
+            Fugiat, reiciendis quibusdam! Sequi, iusto nostrum animi, natus, deleniti deserunt nihil hic ea placeat magni dolore aliquid! 
+            Et facere beatae recusandae. Rerum expedita officiis illo at saepe.
+        </div>
+
+        <div id="sidebar">
+            sidebar!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At odit esse dolorem itaque placeat quis ipsam? Aut reprehenderit dolorum impedit.
+        </div>
+
+        <div id="remark">
+            remark!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At odit esse dolorem itaque placeat quis ipsam? Aut reprehenderit dolorum impedit.
+        </div>
+
+        <div id="footer">
+            footer!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At odit esse dolorem itaque placeat quis ipsam? Aut reprehenderit dolorum impedit.
+        </div>
+
+    </div>
+</body>
+</html>
